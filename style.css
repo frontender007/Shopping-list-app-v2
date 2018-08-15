@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Lobster');
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  margin: 50px;
+  font-family: 'Lato', sans-serif;
+}
+.container{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 400px;
+  overflow-y: hidden;
+  text-align: center;
+  background: #313334;
+  -webkit-box-shadow: 0 0 5px #333;
+  -moz-box-shadow: 0 0 5px #333;
+  box-shadow: 0 0 5px #333;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  position: relative;
+}
+
+h1{
+  font-size: 36px;
+  color: #fff;
+  padding: 20px 0;
+  font-family: 'Lobster', cursive;
+}
+header{
+  width:100%;
+  height: 80px;
+  background: #4be772;
+
+}
+
+form{
+  width: 100%;
+  padding: 20px;
+  position:relative;
+}
+
+input{
+  width: 100%;
+  float: left;
+  display:inline-block;
+  background: #96f1ad;
+  border: 0;
+  outline: none;
+  margin-right: 1px;
+  padding: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-box-shadow: 0 0 5px #888;
+  -moz-box-shadow: ;
+  box-shadow: ;
+  text-indent: 15px;
+  color: #000000;
+}
+
+button{
+  width: 33px;
+  height: 33px;
+  float: left;
+  display:inline-block;
+  border: 0;
+  outline: none;
+  margin-left: 1px;
+  padding: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top:20px;
+  right:16px;
+  background: coral;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 16.5px;
+}
+
+#numItems {
+  font-size: 18px;
+  color: #efefef;
+  padding: 15px 0;
+}
+
+ul {
+  padding: 20px;
+}
+li {
+  width: 100%;
+  float: left;
+  background: coral;
+  text-align: left;
+  padding: 10px 0 10px 5px;
+  margin-bottom: 5px;
+  position: relative;
+  visibility: visible;
+  opacity: 0;
+  -webkit-transition: opacity 2s ease;
+  -moz-transition: opacity 2s ease;
+  -ms-transition: opacity 2s ease;
+  -o-transition: opacity 2s ease;
+  transition: opacity 2s ease;
+  color: #fff;
+}
+
+li:last-of-type{
+  margin-bottom: 0;
+}
+
+span {
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 50px;
+  color: coral;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 16px;
+  padding-top: 6px;
+}
+
+.removed {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.added{
+  visibility: visible;
+  opacity: 1;
+}
+
+#doneButton{
+  position: absolute;
+  top: 3px;
+  right: 48px;
+}
+
+.posDoneAfter{
+  position: absolute;
+  top: 3px;
+  right: 10px;
+}
+
+.markDone{
+  background: #4be772;
+  text-decoration: line-through;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 40%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer small {
+  text-align: center;
+  color: #4be772;
+  font-size: 11px;
+}
