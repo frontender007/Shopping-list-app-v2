@@ -2,7 +2,13 @@ var addBtn = document.getElementById("add");
 var item = document.getElementById("item");
 var numItems = document.getElementById("numItems");
 var counter = 0;
-addBtn.addEventListener("click", function(e){
+
+var listItems = JSON.parse(localStorage.geItem("listItems"))||[];
+
+addBtn.addEventListener("click", addItem);
+
+function addItem(e){
+
   e.preventDefault();
   var text = item.value;
   if(text){
@@ -21,7 +27,10 @@ addBtn.addEventListener("click", function(e){
     doneButton.addEventListener("click",  markDone);
     counter++;
     if(counter> 0){
-      numItems.textContent = "Number of items on Shopping list : " + counter;
+      numItems.textContent = "Number of items : " + counter;
+    }
+    else {
+      numItems.textContent = "";
     }
   }
   else{
@@ -30,15 +39,23 @@ addBtn.addEventListener("click", function(e){
     return;
   }
   item.value = "";
+}
 
-});
 
+/* function to remove item from the list */
 function removeItem(e){
   e.currentTarget.parentNode.classList.remove("added");
   e.currentTarget.parentNode.classList.add("removed");
   list.removeChild(e.currentTarget.parentNode);
+  if(counter > 0){
+    numItems.textContent = "Number of items : " + --counter;
+  }
+  else{
+    numItems.textContent = "";
+  }
 }
 
+/* function to mark an item completed/done on the list */
 function markDone(e){
   e.currentTarget.parentNode.classList.add("markDone");
   var removed = e.currentTarget.parentNode.children[1];
